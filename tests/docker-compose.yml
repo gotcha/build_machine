@@ -1,0 +1,13 @@
+version: "3"
+services:
+
+  plone:
+    build: .
+    ports: 
+      - "8080:8080"
+    volumes:
+      - var:/usr/src/app/var
+    command: bin/instance console
+
+volumes:
+  var:
